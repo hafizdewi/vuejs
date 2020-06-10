@@ -9,13 +9,8 @@ pipeline {
     }
     stage('Build') {
        steps {
-         sh 'npm install'
+         sh 'cd C:/Program Files (x86)/Jenkins/workspace/vuejenkins && cnpm install && npm run build'
        }
-    }
-    stage('Test') {
-      steps {
-        sh 'npm run build'
-      }
     }
   }
 }
